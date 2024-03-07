@@ -1,6 +1,8 @@
 # ThirdSound
 
-Solves for standing wave solutions of third sound (surface waves) on thin-film helium. Uses the numerical method developed by A. J. Roberts. 
+Solves for standing wave solutions of third sound (surface waves) on thin-film helium of liquid depth $h$, in a 1D rectangular box. Hard-wall boundary conditions are assumed on the bottom of the container and the side walls. 
+
+Uses the numerical method developed by A. J. Roberts. 
 
 
 The equations for the surface $\eta(x,t)$ and potential $\phi(x,y,t)$ are 
