@@ -1,0 +1,16 @@
+function Q = rk4(simgrids,simparams)
+
+    Q1=simparams.dt.*evolve(...
+        simparams.t, ...
+        simgrids.Q, ...
+        simgrids.k,...
+        simparams.N,...
+        simparams.d);
+    
+    Q2=simparams.dt.*evolve(simparams.t+simparams.dt/2,simgrids.Q+Q1/2,simgrids.k,simparams.N,simparams.d);
+    Q3=simparams.dt.*evolve(simparams.t+simparams.dt/2,simgrids.Q+Q2/2,simgrids.k,simparams.N,simparams.d);
+    Q4=simparams.dt.*evolve(simparams.t+simparams.dt,simgrids.Q+Q3,simgrids.k,simparams.N,simparams.d);
+    
+    Q=simgrids.Q+(Q1+2*(Q2+Q3)+Q4)/6;
+    
+return
