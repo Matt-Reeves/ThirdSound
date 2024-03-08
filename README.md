@@ -40,5 +40,7 @@ Suggestions for future work (in order of increasing difficulty)
 - Upgrade to investiage other geometry effects, e.g., non-flat bottom of the basin. 
 
 
+Relevant papers are included in the literature folder of this repo, along with some lecture notes etc.  that I found helpful for getting started on learning about surface waves. 
+
 
  
