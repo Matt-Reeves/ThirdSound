@@ -2,14 +2,16 @@
 
 Solves for standing wave solutions of third sound (surface waves) on thin-film helium of liquid depth $h$, in a 1D rectangular box. Hard-wall boundary conditions are assumed on the bottom of the container and the side walls. 
 
-Uses the numerical method developed by A. J. Roberts [IMA Journal of Applied Mathematics, Volume 31, Issue 1, July 1983, Pages 13–35,]
+Uses the numerical method developed by A. J. Roberts [IMA Journal of Applied Mathematics, Volume 31, Issue 1, July 1983, Pages 13–35.] The standing waves are found by using a method very similar to that  outlined by Smith and Roberts [Physics of Fluids 11, 1051–1064 (1999)], however, instead of arclength continuation, the nonlinear system is solved using Powell's dogeleg method [as used in e.g., Mercer and Roberts, Wave Motion Volume 19, Issue 3, May 1994, Pages 233-244 ]. Upgrading to arclength continuation would be better for dealing with resonances, as seen in Smith & Roberts. 
 
 
 The equations for the surface $\eta(x,t)$ and potential $\phi(x,y,t)$ are 
 
 $$ \partial_t \eta + \phi_x \eta_x = \phi_y  $$
 
-$$ \partial_t \phi - \alpha \left[\frac{1}{(h + \eta)^3} - \frac{1}{h^3} \right] + \frac{1}{2}( \phi_x^2 + \phi_y^2) =0  $$
+$$ \partial_t \phi - \alpha \left[\frac{1}{(h + \eta)^3} - \frac{1}{h^3} \right] + \frac{1}{2}( \phi_x^2 + \phi_y^2) =0  $$.
+
+The code parameterizes $\eta(x,t) = \{X_j(t), Y_j(t) \}, and solves for a profile which repeats itself after one period (the period is also unknown and is found iteratively). 
 
 The code is run by calling the function `doglegSolve(N,h,A,waveType,delta_A,Amax)`. Here `N` is the number of grid points, `h` is fluid depth, `A` is the wave acceleration at $t=0$, (which parameterizes the solutions). Wavetype may be either `'VdW'` or `'Gravity'`. Gravity replaces the restoring force with the ordinary linear restoring force for water waves. `deltaA` specifices the value to increment the acceleration, and `Amax` is the largest wave acceleration sought. The acceleration is related to the height of the wave but has been shown to be more suitable for seeking numerical solutions under some circumstances. 
 
