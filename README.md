@@ -15,7 +15,7 @@ The code parameterizes $\eta(x,t) = \{X_j(t), Y_j(t)\}$, and solves for a profil
 
 The code is run by calling the function `doglegSolve(N,h,A,waveType,delta_A,Amax)`. Here `N` is the number of grid points, `h` is fluid depth, `A` is the wave acceleration at $t=0$, (which parameterizes the solutions). Wavetype may be either `'VdW'` or `'Gravity'`. Gravity replaces the restoring force with the ordinary linear restoring force for water waves. `deltaA` specifices the value to increment the acceleration, and `Amax` is the largest wave acceleration sought. The acceleration is related to the height of the wave but has been shown to be more suitable for seeking numerical solutions under some circumstances. 
 
-Note that the code assumes all inputs are strings (this is needed to run on getafix cluster). For example you can run:
+Note that the code assumes all inputs are strings (this is needed to run on getafix cluster, example slurm script for that also provided). For example you can run:
 
 `doglegSolve('16','0.6','0.001','VdW','0.001','0.01')`
 
