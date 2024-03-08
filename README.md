@@ -2,7 +2,7 @@
 
 Solves for standing wave solutions of third sound (surface waves) on thin-film helium of liquid depth $h$, in a 1D rectangular box. Hard-wall boundary conditions are assumed on the bottom of the container and the side walls. 
 
-Uses the numerical method developed by A. J. Roberts. 
+Uses the numerical method developed by A. J. Roberts [IMA Journal of Applied Mathematics, Volume 31, Issue 1, July 1983, Pages 13–35,]
 
 
 The equations for the surface $\eta(x,t)$ and potential $\phi(x,y,t)$ are 
