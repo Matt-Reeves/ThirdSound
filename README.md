@@ -35,6 +35,7 @@ As shown in `HeliumFimStandingWaves` I calculated frequency corrections for Stok
 Suggestions for future work (in order of increasing difficulty)
 
 - I mostly only looked at the profiles and frequencies. Many key optomechanical metrics could still be calculated using only the existing code (effective mass etc., see, e.g. Baker 2016).
+  - Include forcing and damping, which is probably more representative of optomechanics experiments 
 - Upgrade to use pseudoarclength continuation as per Smith and Roberts. This would better deal with resonances (see e.g. their paper), and would allow probing of extreme amplitude waves for thin films (i.e., wave amplitudes $\gtrsim 50$% of the film depths). Note for thin films and modest amplitudes, it may also be more appropriate to use Nakajimia's KdV equation, (or work out the equivalent Boussinesq equation to look at bi-directional solutions). 
 - Upgrade to include surface tension. Compare with the perturbation theory results of Concus, 1960. His calculation extends on the work of T&K, which I followed to calculate the Duffing frequency for Stokes waves. (Relevant Mathematica notebook is also in this repo). Compare also with soliton predictions of Nakajimia (1980).  Solving for surface tension numerically, probably need to change RK4 timestepper to a semi-implicit method. 
 - Upgrade to investiage other geometry effects, e.g., non-flat bottom of the basin. 
