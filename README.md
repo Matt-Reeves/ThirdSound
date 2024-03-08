@@ -22,7 +22,7 @@ Note that the code assumes all inputs are strings (this is needed to run on geta
 which will find solutions for $h=0.6$, using $N=16$ points, for accelerations ranging from 0.001 to 0.01 in increments of 0.1.  
 
 
-An example solution for the surface profile is shown below, for $h=0.2$. This partciular example is a cnoidal-like wave. 
+An example solution for the surface profile is shown below, for $h=0.2$. This particular example is a cnoidal-like wave which sloshes back and forth across the container: 
 
 <p align="center">
  <img width="611" alt="Screen Shot 2024-03-07 at 2 44 27 pm" src="https://github.com/Matt-Reeves/ThirdSound/assets/65841999/9a79b4a0-afb2-4a98-9194-c03124d58ca3">  
