@@ -9,7 +9,7 @@ The equations for the surface $\eta(x,t)$ and potential $\phi(x,y,t)$ are
 
 $$ \partial_t \eta + \phi_x \eta_x = \phi_y$$
 
-$$ \partial_t \phi - \alpha \left[\frac{1}{(h + \eta)^3} - \frac{1}{h^3} \right] + \frac{1}{2}( \phi_x^2 + \phi_y^2) =0  $$.
+$$ \partial_t \phi - \alpha \left[\frac{1}{(h + \eta)^3} - \frac{1}{h^3} \right] + \frac{1}{2}( \phi_x^2 + \phi_y^2) =0  $$
 
 The code parameterizes $\eta(x,t) = \{X_j(t), Y_j(t)\}$, and solves for a profile which repeats itself after one period (the period is also unknown and is found iteratively). 
 
